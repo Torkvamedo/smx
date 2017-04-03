@@ -1,3 +1,4 @@
+s = ['30','8','16','24','5','18','29']
 def heapsort(s):
     sl = len(s)
 
@@ -12,9 +13,13 @@ def heapsort(s):
             swap(pi, gtci)
             pi = gtci
     # heapify
-    for i in range((sl/2)-1, -1, -1):
+    for i in range((sl//2)-1, -1, -1):
         sift(i, sl)
     # sort
     for i in range(sl-1, 0, -1):
         swap(i, 0)
         sift(0, i)
+
+print(s)
+heapsort(s)
+print(s)
