@@ -1,3 +1,4 @@
+s = [14,32,8,11,112,7,33,5,6,34,6,45,43,56]
 def heapsort(s):
     sl = len(s)
 
@@ -11,10 +12,12 @@ def heapsort(s):
             gtci = i_gt(pi*2+1, pi*2+2)
             swap(pi, gtci)
             pi = gtci
-    # heapify
-    for i in range((sl/2)-1, -1, -1):
+    for i in range ((sl//2)-1, -1, -1):
         sift(i, sl)
-    # sort
     for i in range(sl-1, 0, -1):
         swap(i, 0)
         sift(0, i)
+
+print(s)
+heapsort(s)
+print(s)
